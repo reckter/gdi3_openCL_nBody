@@ -34,7 +34,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	                    blockdata,
 	                    source + j * nt,
 	                    nt,
-	                    NULL);
+	                    0);
 
         barrier(CLK_LOCAL_MEM_FENCE);
         wait_group_events(1, &event);
