@@ -6,7 +6,7 @@
 #BSUB -n 1
 #BSUB -q kurs2 
 
-cd /home/kurs2/uzz66agex/GDI3/
+cd /home/kurs2/uz66agex/GDI3/
 
 mkdir -p $LSB_BATCH_JID
 
@@ -19,5 +19,5 @@ hostname | tee -a myLogfile.log
 module load cuda
 module load gcc
 
-cd /home/kurs2/uzz66agex/GDI3/
-/home/kurs2/uzz66agex/GDI3/nBody -k 1 | tee -a myTest -i
+cd /home/kurs2/uz66agex/GDI3/
+/home/kurs2/uz66agex/GDI3/nBody -k 1 | tee -a myTest -i
