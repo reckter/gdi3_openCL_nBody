@@ -175,7 +175,7 @@ bool evalAgainstFile() {
 			{
 				is_ok = false;
 				err_row.push_back(i-3);
-				err_vals.push_back(abs(diff));
+				err_vals.push_back(fabs(diff));
 				err_vals.push_back(cval);
 				err_vals.push_back(oval);
 				err_cnt++;
