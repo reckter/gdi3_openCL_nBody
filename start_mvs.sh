@@ -20,4 +20,4 @@ module load cuda
 module load gcc
 
 cd /home/kurs2/uzz66agex/GDI3/
-/home/kurs2/uzz66agex/GDI3/nBody -k 2 | tee -a myTest -i
+/home/kurs2/uzz66agex/GDI3/nBody -k 1 | tee -a myTest -i
