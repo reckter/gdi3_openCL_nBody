@@ -1,4 +1,8 @@
+#ifdef __APPLE__
+#include <OpenCL/cl.h>
+#else
 #include <CL/cl.h>
+#endif
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
