@@ -335,7 +335,7 @@ int runCL() {
 	// velocity input
 	status = clSetKernelArg(
             kernel,
-            3,
+            2,
             nparticle * 3,
             (void *)vel);
 	if(status != CL_SUCCESS)                                                                                                                                            
