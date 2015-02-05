@@ -32,9 +32,9 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 
 	}
 	
-	destionation[i].xyz = source[i].xyz + dt * vel[i].xyz + 0.5 * dt * dt * accel.xyz
+	destination[i].xyz = source[i].xyz + dt * vel[i].xyz + 0.5 * dt * dt * accel.xyz;
 
-	vel[i].xyz + dt * accel.xyz
+	vel[i].xyz + dt * accel.xyz;
 
 	return;
 }
