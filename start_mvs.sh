@@ -1,5 +1,5 @@
 #!/bin/sh
-#BSUB -J GDI3_P5_GruppenNR<XY>
+#BSUB -J GDI3_P5_GruppenNR11
 #BSUB -W 00:05
 #BSUB -x
 #BSUB -o /home/kurs2/<TU-ID>/GDI3/Test.%J.out
