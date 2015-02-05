@@ -337,7 +337,7 @@ int runCL() {
             kernel,
             3,
             nparticle * 3,
-            (cvoid *)vel);
+            (void *)vel);
 	if(status != CL_SUCCESS)                                                                                                                                            
 	{                                                                                                                                                                   
 			std::cout<<"Error: Setting kernel argument. (velg_buf)\n";                                                                                                    
