@@ -468,7 +468,7 @@ int runCL() {
 		if(status != CL_SUCCESS)                                                                                                                                            
 		{                                                                                                                                                                   
 				std::cout<<                                                                                                                                                 
-						"Error: Enqueueing kernel onto command queue. (clEnqueueNDRangeKernel):" + status + "\n";
+						"Error: Enqueueing kernel onto command queue. (clEnqueueNDRangeKernel):" << status << "\n";
 		} 
 
 		/* wait for the kernel call to finish execution */                                                                                                                  
