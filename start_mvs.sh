@@ -24,4 +24,4 @@ rm myTest
 echo ===================================================== > myTest
 echo "=======         " $LSB_BATCH_JID "           =========" >> myTest
 echo ===================================================== >> myTest
-/home/kurs2/uz66agex/GDI3/nBody -k 1 | tee -a myTest -i
+/home/kurs2/uz66agex/GDI3/nBody -k 2 | tee -a myTest -i
