@@ -154,24 +154,24 @@ bool evalAgainstFile() {
 		float gval = pos1g[i];
 		float tmp;
 
-        /*
-		if(abs(oval) > abs(cval)) {
+
+		if(fabs(oval) > fabs(cval)) {
 			tmp = oval;
 			oval = cval;
 			cval = tmp;
 		}
-		*/
 
-		float diff = abs(cval - oval) / abs(cval) * 100.0f;
+
+		float diff = (cval - oval) / (cval) * 100.0f;
 
 		if(printcnt2 < 10) {
 			cout << i << ": " << oval << "   /   " << cval << ";" << diff << "\n";
 			printcnt2++;
 		}
 
-		if(abs(diff) > 0.50) {
+		if(fabs(diff) > 0.50) {
 			// If both are very small then also don't print
-			if(!(	abs(oval) < 0.1 && abs(cval) < 0.1))
+			if(!(	fabs(oval) < 0.1 && fabs(cval) < 0.1))
 			{
 				is_ok = false;
 				err_row.push_back(i-3);
