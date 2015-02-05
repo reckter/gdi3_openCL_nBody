@@ -8,6 +8,7 @@
 #include <vector>
 
 #include <CL/cl.h>
+#include <OpenCL/opencl.h>
 
 #include "OpenCLManager.h"
 
@@ -169,7 +170,8 @@ bool evalAgainstFile() {
 			printcnt2++;
 		}
 
-		if(fabs(diff) > 0.50) {
+		if(fabs(diff) > 0.50f) {
+            cout << "error ? " << ": " << oval << "   /   " << cval << ";" << diff << "\n";
 			// If both are very small then also don't print
 			if(!(	fabs(oval) < 0.1 && fabs(cval) < 0.1))
 			{
