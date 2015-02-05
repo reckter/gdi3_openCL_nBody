@@ -340,7 +340,7 @@ int runCL() {
 	status = clSetKernelArg(
             kernel,
             2,
-            nparticle * 3,
+            nparticle * 4,
             (void *)vel);
 	if(status != CL_SUCCESS)                                                                                                                                            
 	{                                                                                                                                                                   
