@@ -154,12 +154,15 @@ bool evalAgainstFile() {
 		float gval = pos1g[i];
 		float tmp;
 
+        /*
 		if(abs(oval) > abs(cval)) {
 			tmp = oval;
 			oval = cval;
 			cval = tmp;
 		}
-		float diff = (cval - oval) / cval * 100.0f;
+		*/
+
+		float diff = abs(cval - oval) / abs(cval) * 100.0f;
 
 		if(printcnt2 < 10) {
 			cout << i << ": " << oval << "   /   " << cval << ";" << diff << "\n";
