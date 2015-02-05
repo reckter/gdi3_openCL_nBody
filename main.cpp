@@ -8,7 +8,7 @@
 #include <vector>
 
 #include <CL/cl.h>
-#include <OpenCL/opencl.h>
+//#include <OpenCL/opencl.h>
 
 #include "OpenCLManager.h"
 
