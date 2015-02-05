@@ -340,7 +340,7 @@ int runCL() {
             (void *)vel);
 	if(status != CL_SUCCESS)                                                                                                                                            
 	{                                                                                                                                                                   
-			std::cout<<"Error: Setting kernel argument. (velg_buf)\n";                                                                                                    
+			std::cout<<"Error: Setting kernel argument. (velg_buf): " << status << "\n";
 			return 1;                                                                                                                                                   
 	}
 
