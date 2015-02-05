@@ -6,7 +6,6 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	int i = get_global_id(0);
 	int n = get_global_size(0);
 
-
 	__global float4* source;
 	__global float4* destination;
 	if(is_even) {
@@ -17,7 +16,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	    destination = pos1;
 	}
 
-	float4 accel = (float4)(0.0, 0.0, 0.0, 0.0);
+	float4 accel = (float4)(0.0f, 0.0f, 0.0f, 0.0f);
 	for(int j = 0; j < n; j++) {
 	    // the 4th diff is the mass, must be ignored later on!
 	    float4 diff = source[j] - source[i];
@@ -32,7 +31,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 
 	}
 	
-	destination[i].xyz = source[i].xyz + dt * vel[i].xyz + 0.5 * dt * dt * accel.xyz;
+	destination[i].xyz = source[i].xyz + dt_f3 * vel[i].xyz + 0.5f * dt * dt * accel.xyz;
 
 	vel[i].xyz += dt * accel.xyz;
 
