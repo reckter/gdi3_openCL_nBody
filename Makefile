@@ -7,11 +7,11 @@ CC=g++
 DEFS=  
 PROGNAME= nBody
 INCLUDES=-I. -I../common 
-LIBS=-framework OpenCL
+LIBS=-lOpenCL
 
 
 DEFINES=$(INCLUDES) $(DEFS)
-CFLAGS=-g -O3 $(DEFINES)
+CFLAGS=-g -O3 -fopenmp $(DEFINES)
 
 SRCS = main.cpp OpenCLManager.cpp
 
