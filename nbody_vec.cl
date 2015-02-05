@@ -7,8 +7,8 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	int n = get_global_size(0);
 
 
-	float4* source;
-	float4* destination;
+	__global float4* source;
+	__global float4* destination;
 	if(is_even) {
 	    source = pos1;
 	    destination = pos2;
@@ -32,9 +32,9 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 
 	}
 	
-	destionation[i].xyz = source[i].xyz + dt * vel[i].xyz + 0.5 * dt * dt * accel.xyz
+	destination[i].xyz = source[i].xyz + dt * vel[i].xyz + 0.5 * dt * dt * accel.xyz;
 
-	vel[i].xyz + dt * accel.xyz
+	vel[i].xyz + dt * accel.xyz;
 
 	return;
 }
