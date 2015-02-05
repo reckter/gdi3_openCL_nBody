@@ -534,6 +534,7 @@ int cleanCL() {
 int main(int argc, char *argv[]) {
 	SIM_TYPE = 0;
 
+    cout << "starting!" << endl;
 	for (int i = 1; i < argc; ++i) {
 
 		std::string arg = std::string(argv[i]);
