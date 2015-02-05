@@ -336,8 +336,8 @@ int runCL() {
 	status = clSetKernelArg(
             kernel,
             2,
-            nparticle * 4 * sizeof(cl_float),
-            (void *)vel);
+            sizeof(cl_mem),
+            (void *)&velg_buf);
 	if(status != CL_SUCCESS)                                                                                                                                            
 	{                                                                                                                                                                   
 			std::cout<<"Error: Setting kernel argument. (velg_buf): " << status << "\n";
