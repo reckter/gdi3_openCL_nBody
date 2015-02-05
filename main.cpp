@@ -464,7 +464,7 @@ int runCL() {
 		if(status != CL_SUCCESS)                                                                                                                                            
 		{                                                                                                                                                                   
 				std::cout<<                                                                                                                                                 
-						"Error: Enqueueing kernel onto command queue. (clEnqueueNDRangeKernel)\n";                                                                                                                        
+						"Error: Enqueueing kernel onto command queue. (clEnqueueNDRangeKernel):" + status + "\n";
 		} 
 
 		/* wait for the kernel call to finish execution */                                                                                                                  
@@ -556,8 +556,10 @@ int main(int argc, char *argv[]) {
 	cout << "Read Solution from File.\n";
 	readSolutionFromFile();	
 
-	cout << "Starting OpenCL.\n";
+	cout << "setting up OpenCL.\n";
 	setupCL();
+
+    cout << "running OpenCL.\n";
 	runCL();
 
 	cout << "Starting Evaluation.\n";
