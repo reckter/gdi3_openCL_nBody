@@ -11,6 +11,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 
 	__global float4* source;
 	__global float4* destination;
+
 	if(is_even) {
 	    source = pos1;
 	    destination = pos2;
@@ -20,6 +21,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	}
 
 	float4 accel = (float4)(0.0f, 0.0f, 0.0f, 0.0f);
+
 	for(int j = 0; j < n; j++) {
 	    // the 4th diff is the mass, must be ignored later on!
 	    float4 diff = source[j] - source[i];
