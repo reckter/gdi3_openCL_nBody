@@ -7,7 +7,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	int n = get_global_size(0);
 
     float3 dt_f3 = (float3)(dt, dt, dt);
-    float3 half = (float3)(0.5f, 0.5f, 0.5f);
+    float3 pointFive = (float3)(0.5f, 0.5f, 0.5f);
 
 	__global float4* source;
 	__global float4* destination;
@@ -38,7 +38,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 
 	}
 	
-	destination[i].xyz = source[i].xyz + dt_f3 * vel[i].xyz + half * dt_f3 * dt_f3 * accel.xyz;
+	destination[i].xyz = source[i].xyz + dt_f3 * vel[i].xyz + pointFive * dt_f3 * dt_f3 * accel.xyz;
 
 	vel[i].xyz += dt_f3 * accel.xyz;
 
