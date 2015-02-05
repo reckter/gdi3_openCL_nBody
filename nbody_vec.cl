@@ -26,7 +26,7 @@ __kernel void nbody (	__global float4* pos1 , __global float4* pos2, __global fl
 	    // the 4th diff is the mass, must be ignored later on!
 	    float4 diff = source[j] - source[i];
 
-	    float invr = 1.0 / sqrt( diff.x * diff.x + diff.y * diff.y * diff.z * diff.z + eps);
+	    float invr = 1.0 / sqrt( diff.x * diff.x + diff.y * diff.y + diff.z * diff.z + eps);
 	    
 	    float invr3 = invr * invr * invr;
 	    
